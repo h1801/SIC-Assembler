@@ -1,0 +1,32 @@
+Running command for the Assembler
+    g++ assembler.cpp -o assembler
+    ./assembler input.txt ouput.txt
+On not giving appropriate files it will generate an error and terminate the program.
+
+On executing successfully "Program executed successfully" will be printed.
+Otherwise all the errors will be printed in the Terminal.
+
+Program should start from this command.
+    Name START address
+
+Program should end from this command.
+    END Name
+    The instructions after this will be ignored.
+
+Remaining instructions will be treated in this format.
+
+Name Operation Operand 
+        Or 
+Name BYTE/WORD/RESB/RESW Operand
+        Or 
+Operation Operand
+        Or
+Operation (Only for RSUB)
+
+Appropriate error checks are done and generated errors if it contains any errors.
+
+Intermediate file will be created named "intermediate.txt" after pass 1
+Optable and symbol tables are printed in "tables.txt" file after pass 1
+
+On errors the assembler can't do pass 2 until those are resolved.
+On successfull completion of pass 2 output.txt file will contain the object code.
